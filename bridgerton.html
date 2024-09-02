@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protagonistas de Bridgerton</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWNNyM8ch00dp0pzQhhQsSvUa4HPxKRVRj3w&usqp=CAU');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            color: white;
+        }
+
+        h1 {
+            color: #fff;
+            text-shadow: 2px 2px 4px #000;
+        }
+
+        #charInfo {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 600px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4e2a84;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #3b1c6a;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Protagonistas de Bridgerton</h1>
+
+    <div id="charInfo">
+        <h2>Daphne Bridgerton</h2>
+        <p>
+            Interpretada por Phoebe Dynevor, Daphne é a protagonista da primeira temporada. Ela é a filha mais velha da família Bridgerton e busca um casamento por amor durante a temporada de debutantes em Londres. Sua história se desenrola em meio a intrigas sociais e desafios pessoais enquanto ela luta para encontrar um equilíbrio entre dever e desejo.
+        </p>
+    </div>
+
+    <button onclick="alternarPersonagem()">Próximo Personagem</button>
+
+    <script>
+        var personagens = [
+            {
+                nome: "Daphne Bridgerton",
+                info: "Interpretada por Phoebe Dynevor, Daphne é a protagonista da primeira temporada. Ela é a filha mais velha da família Bridgerton e busca um casamento por amor durante a temporada de debutantes em Londres. Sua história se desenrola em meio a intrigas sociais e desafios pessoais enquanto ela luta para encontrar um equilíbrio entre dever e desejo."
+            },
+            {
+                nome: "Simon Basset",
+                info: "Interpretado por Regé-Jean Page, Simon Basset é o Duque de Hastings e o protagonista masculino da primeira temporada. Marcado por uma infância difícil, ele é inicialmente relutante em se casar, mas acaba se apaixonando por Daphne. Sua jornada envolve superar traumas passados e aceitar o amor em sua vida."
+            },
+            {
+                nome: "Anthony Bridgerton",
+                info: "Interpretado por Jonathan Bailey, Anthony é o irmão mais velho da família Bridgerton e o protagonista da segunda temporada. Como o visconde da família, ele assume a responsabilidade de encontrar uma esposa adequada, mas sua busca por um casamento conveniente se complica quando ele se apaixona por Kate Sharma, uma mulher que desafia suas expectativas e o leva a reconsiderar o que realmente deseja."
+            }
+        ];
+        
+        var indice = 0;
+
+        function alternarPersonagem() {
+            indice = (indice + 1) % personagens.length;
+            document.getElementById("charInfo").innerHTML = "<h2>" + personagens[indice].nome + "</h2><p>" + personagens[indice].info + "</p>";
+        }
+    </script>
+
+</body>
+</html>
